@@ -34,3 +34,23 @@ Thu, Mar 20, 2025  5:33:57 PM:
  tests:  0|5
 total_score: 0/70
 ed8306e
+Thu, Mar 20, 2025  5:37:18 PM: 
+ exercises.c | 20 +++++++++++++++++++-
+ 1 file changed, 19 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'eliminaElementos':
+exercises.c:87:15: error: initialization makes integer from pointer without a cast [-Werror=int-conversion]
+    int dato = first(L) ;
+               ^~~~~
+exercises.c:88:15: error: comparison between pointer and integer [-Werror]
+    while(dato != NULL) {
+               ^~
+exercises.c:91:15: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+          dato = first(L) ;
+               ^
+exercises.c:93:17: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+       else dato = next(L) ;
+                 ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+da2e7e5
