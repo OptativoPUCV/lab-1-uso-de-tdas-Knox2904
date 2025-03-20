@@ -80,7 +80,7 @@ Crea una función que reciba una lista de punteros a int (int*) y
 un entero elem. La función debe eliminar todos los elementos 
 de la lista que sean iguales a elem.
 Asume que popCurrent luego de eliminar un elemento se
-posiciona en el elemento anterior.
+posiciona en el elemento anterior. (completado)
 */
 
 void eliminaElementos(List*L, int elem){
@@ -98,7 +98,7 @@ void eliminaElementos(List*L, int elem){
 Ejercicio 4.
 La función copia los punteros de la pila P1 en la pila P2.
 El orden de ambas pilas se debe mantener.
-Puedes usar una pila auxiliar.
+Puedes usar una pila auxiliar. (completado)
 */
 
 void copia_pila(Stack* P1, Stack* P2) {
