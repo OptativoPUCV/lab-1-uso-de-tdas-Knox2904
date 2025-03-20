@@ -38,7 +38,7 @@ Ejercicio 1.
 Crea una Lista y agrega punteros a elementos del 1 al 10.
 Recuerda que la lista almacena punteros, por lo que
 debes reservar memoria para cada elemento que agregues.
-Al finalizar retorna la lista creada.
+Al finalizar retorna la lista creada.(completo)
 */
 
 List* crea_lista() {
@@ -124,6 +124,23 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   return 0;
+   Stack* pila = create_stack() ; 
+   for(size_t i = 0 ; cadena[i] != '\0' ;i++){
+      if(cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{'){
+         push(pila , cadena[i]) ;
+      }
+      else if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}'){
+         if (cadena[i] == ')' && top(pila) == '(' || cadena[i] == ']' && top(pila) == '[' || cadena[i] == '}' && top(pila) == '{'){
+            pop(pila) ;
+         }
+         else{
+            return 0 ;
+         }
+      }
+   }
+
+
+
+   return 1;
 }
 

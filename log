@@ -110,3 +110,35 @@ Thu, Mar 20, 2025  6:01:25 PM:
  tests:  4|1
 total_score: 50/70
 3d82980
+Thu, Mar 20, 2025  6:41:47 PM: 
+ exercises.c | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:130:22: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+          push(pila , cadena[i]) ;
+                      ^~~~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'void *' but argument is of type 'char'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:133:44: error: comparison between pointer and integer [-Werror]
+          if (cadena[i] == ')' && top(pila) == '(' || cadena[i] == ']' && top(pila) == '[' || cadena[i] == '}' && top(pila) == '{'){
+                                            ^~
+exercises.c:133:84: error: comparison between pointer and integer [-Werror]
+          if (cadena[i] == ')' && top(pila) == '(' || cadena[i] == ']' && top(pila) == '[' || cadena[i] == '}' && top(pila) == '{'){
+                                                                                    ^~
+exercises.c:133:31: error: suggest parentheses around '&&' within '||' [-Werror=parentheses]
+          if (cadena[i] == ')' && top(pila) == '(' || cadena[i] == ']' && top(pila) == '[' || cadena[i] == '}' && top(pila) == '{'){
+              ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+exercises.c:133:124: error: comparison between pointer and integer [-Werror]
+          if (cadena[i] == ')' && top(pila) == '(' || cadena[i] == ']' && top(pila) == '[' || cadena[i] == '}' && top(pila) == '{'){
+                                                                                                                            ^~
+exercises.c:133:111: error: suggest parentheses around '&&' within '||' [-Werror=parentheses]
+          if (cadena[i] == ')' && top(pila) == '(' || cadena[i] == ']' && top(pila) == '[' || cadena[i] == '}' && top(pila) == '{'){
+                                                                                              ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+3432af3
