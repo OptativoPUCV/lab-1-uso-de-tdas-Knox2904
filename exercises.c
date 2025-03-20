@@ -49,7 +49,7 @@ List* crea_lista() {
       if(dato==NULL) exit(EXIT_FAILURE) ;
       *dato = i ;
       pushFront(l , dato) ;
-      
+
    }
    return l ;
 }
@@ -61,17 +61,15 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
 
-   int *dato ;
+   int *dato = (int*)first(L) ;
    int suma = 0 ;
-
-   dato = (int*)first(L) ;
 
    while(dato != NULL){
       suma+= *dato ;
       dato = (int*)next(L) ;  
    }
 
-   return 0;
+   return suma;
 }
 
 /*
