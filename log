@@ -13,3 +13,14 @@ exercises.c:88:11: error: unused variable 'pilaAux' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 64b35d8
+Thu, Mar 20, 2025  3:37:25 PM: 
+ exercises.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'copia_pila':
+exercises.c:99:11: error: unused variable 'pilaAux' [-Werror=unused-variable]
+    Stack* pilaAux ;
+           ^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+8f8aee2
