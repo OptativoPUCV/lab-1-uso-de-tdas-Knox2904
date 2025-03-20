@@ -42,16 +42,14 @@ Al finalizar retorna la lista creada.
 */
 
 List* crea_lista() {
-   List* L = create_list();
-
+   List* l = create_list() ;
+   int* dato = (int*)malloc(sizeof(int)) ;
+   if(dato==NULL) exit(EXIT_FAILURE) ;
    for(size_t i = 0 ; i < 10 ; i++){
-      int *dato = (int*)malloc(sizeof(int)) ;
-      if (dato == NULL) exit(EXIT_FAILURE) ;
       *dato = i ;
-      pushBack(L , dato) ;
+      pushFront(l , dato) ; 
    }
-
-   return L;
+   return l ;
 }
 
 /*
